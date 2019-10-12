@@ -1,0 +1,14 @@
+//与之前的题目没什么不同，找最大值就完事了，闲得无聊也可以排序一下输出第一个
+ElementType Max(ElementType s[],int N)
+{
+    int i;
+    ElementType max = s[0];
+    for(i=0;i<N;i++)
+    {
+        if(max<s[i])
+        {
+            max = s[i];
+        }
+    }
+    return max;
+}
