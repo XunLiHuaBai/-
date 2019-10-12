@@ -1,0 +1,11 @@
+int Sum(int List[],int N)
+{
+    int i;
+    int result = 0;
+    for(i=0;i<N;i++)
+    {
+        result+=List[i];
+    }
+    return result;
+}
+//没什么难度，但我忘了初始化result的值，一直通不过
