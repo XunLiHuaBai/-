@@ -1,0 +1,14 @@
+double f(int n,double a[],double x)
+{
+    int i;
+    double powx = 1;
+    double result = a[0];
+    for(i=1;i<=n;i++)
+    {
+        powx *=x;
+        result += (a[i])*powx;
+    }
+    return result;
+}
+//卡了半小时，我真是个傻子。
+没有考虑当n=0的时候，x的阶乘为1，所以累加直接从a[1]开始即可。我太菜了o(╥﹏╥)o
