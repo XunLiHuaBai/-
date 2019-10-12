@@ -1,0 +1,12 @@
+ElementType Average(ElementType s[],int N)
+{
+    int i;
+    ElementType add = 0;
+    ElementType avg = 0;
+    for(i=0;i<N;i++)
+    {
+        add+=s[i];
+    }
+    avg = add/N;
+    return avg;
+}
