@@ -1,0 +1,36 @@
+//这道题目主要是取出一个未知位数的数字的每一位
+//思路是：进行%10运算取出最后一位，然后/10去掉最后一位，设置一个判断条件，当这个数的大小小于0的时候跳出循环
+int IsTheNumber ( const int N )
+{
+    int i ;
+    int m;
+    int n;
+    int p;
+    int zzz;//存放取出数的最后一位；
+    m = N;
+    n = (int)sqrt(N);//强制转换类型
+    p = n*n;
+
+    if(p==m)
+    {
+        int a[10]={0};
+        while(m>0)
+        {
+            zzz = m%10;//取出这个数的最后一位
+            for(int i=0;i<=9;i++)
+            {
+                if(zzz==i)
+                {
+                    a[i]++;
+                    if(a[i]==2)//出现两次相同的数
+                    {
+                        return 1;
+                    }
+                }
+            }
+            m = m/10;//去掉m的最后一位
+        }
+        return 0;
+    }
+    return 0;
+}
