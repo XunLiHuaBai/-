@@ -1,0 +1,15 @@
+//很简单，我这样的笨蛋一眼就会
+int Factorial( const int N )
+{
+    if(N>=0)
+    {
+        int i ;
+        int result=1;
+        for(i=1;i<=N;i++)
+        {
+            result = result*i;
+        }
+        return result;
+    }else
+    return 0;
+}
