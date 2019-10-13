@@ -1,0 +1,29 @@
+//题目的思路类似于之前的6-7完全平方数，区别在于一个是统计痴线超过两次的位数，一个是统计制定位数出现的次数
+//思路和之前一样，同样的模运算进行判断之后除以10
+int Count_Digit ( const int N, const int D )
+{
+    int a;
+    int temp;
+    int k=0;
+    if(N<=0)
+    {
+        a = ~N+1;
+    }else
+    {
+        a = N;
+    }
+    while(a==0&&D==0)
+    {
+        return 1;
+    }
+    while(a>0)
+    {
+        temp = a%10;
+        if(temp==D)
+        {
+            k++;
+        }
+        a = a/10;
+    }
+    return k;
+}
